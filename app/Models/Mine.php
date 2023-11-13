@@ -13,7 +13,12 @@ class Mine extends Model
 
     public function concession(): BelongsTo
     {
-        return $this->belongsTo{ related: Concession;;class};
+        return $this->belongsTo{ Concession::class};
+    }
+
+    public function equipement(): BelongsTo
+    {
+        return $this->belongsToMany{ Equipement::class};
     }
 
 }
